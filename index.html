@@ -819,6 +819,93 @@ A fundamental reimagination will usher in significant change.</p>
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
+<!-- VIDEO POPUP -->
+<div id="videoPopup" class="video-popup" style="display:none;">
+  <div class="video-container">
+    <span class="close-btn" onclick="closeVideoPopup()">&times;</span>
+    
+    <video id="popupVideo" autoplay muted playsinline>
+      <source src="./assets/images/1762331630286.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<style>
+.video-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.video-container {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+</style>
+
+<script>
+function showVideoPopup() {
+  const popup = document.getElementById("videoPopup");
+  const video = document.getElementById("popupVideo");
+
+  if (popup && video) {
+    popup.style.display = "flex";
+    video.play();
+
+    // Auto close after 13 seconds
+    setTimeout(closeVideoPopup, 13000);
+  }
+}
+
+function closeVideoPopup() {
+  const popup = document.getElementById("videoPopup");
+  const video = document.getElementById("popupVideo");
+
+  if (popup) popup.style.display = "none";
+  if (video) video.pause();
+}
+
+// Check if user is new
+window.onload = function() {
+  const hasVisited = localStorage.getItem("videoPopupShown");
+  if (!hasVisited) {
+    // Delay popup by 20 seconds
+    setTimeout(() => {
+      showVideoPopup();
+      localStorage.setItem("videoPopupShown", "true"); // mark as shown
+    }, 20000);
+  }
+};
+</script>
+    
         
         <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
