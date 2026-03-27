@@ -274,15 +274,26 @@ You’re never on your own when it comes to your life insurance. I am  here for 
 
     <!-- Google reCAPTCHA -->
     <div class="col-12 mt-2">
-      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+      <div class="g-recaptcha" data-sitekey="6LfB75ksAAAAAJH1HtjfPi48ZBOBpHuoZ4XAfei0"></div>
     </div>
 
     <div class="col-12 text-center mt-3">
       <button class="btn btn-primary rounded-pill px-4 py-2" type="submit">
+          <button class="g-recaptcha"
+              data-sitekey="6LfB75ksAAAAAJH1HtjfPi48ZBOBpHuoZ4XAfei0"
+    data-callback='onSubmit'
+    data-action='submit Request'>
+              
         Submit Request
       </button>
+      </button>
     </div>
-
+<!-- Replace the variables below. -->
+<script>
+  function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+  }
+</script>
   </div>
 </form>
 
