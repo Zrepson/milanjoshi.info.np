@@ -160,9 +160,8 @@
                 <div class="modal-content rounded-0">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
-  Search
-</button>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                   
                         
                     </div>
                     <div class="modal-body d-flex align-items-center bg-primary">
@@ -176,6 +175,12 @@
         </div>
 
         <script>
+document.querySelector('#searchModal input[type="search"]').addEventListener('keypress', function(e){
+    if(e.key === 'Enter') {
+        document.getElementById('search-icon-1').click();
+    }
+});
+            
             document.getElementById('search-icon-1').addEventListener('click', function() {
     const query = document.querySelector('#searchModal input[type="search"]').value.trim();
     if(query) {
