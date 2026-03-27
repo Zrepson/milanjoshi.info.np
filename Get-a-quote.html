@@ -29,6 +29,12 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfB75ksAAAAAJH1HtjfPi48ZBOBpHuoZ4XAfei0"></script>
+  
+        
+        
     </head>
 
     <body>
@@ -201,138 +207,94 @@ You’re never on your own when it comes to your life insurance. I am  here for 
             Fill in your details and I’ll help you choose the right plan.
           </p>
 
-          <form action="https://formspree.io/f/your-form-id" method="POST">
+          <form action="pro-send-quote.php" method="POST">
+  
+  <div class="row g-3">
+    
+    <div class="col-md-6">
+      <label class="form-label">Full Name</label>
+      <input type="text" name="name" class="form-control" required>
+    </div>
 
-            <div class="row g-3">
-              
-              <div class="col-md-6">
-                <label class="form-label">Full Name</label>
-                <input type="text" name="name" class="form-control" required>
-              </div>
+    <div class="col-md-6">
+      <label class="form-label">Phone Number</label>
+      <input type="tel" name="phone" class="form-control" required>
+    </div>
 
-              <div class="col-md-6">
-                <label class="form-label">Phone Number</label>
-                <input type="tel" name="phone" class="form-control" required>
-              </div>
+    <div class="col-md-6">
+      <label class="form-label">Email Address</label>
+      <input type="email" name="email" class="form-control">
+    </div>
 
-              <div class="col-md-6">
-                <label class="form-label">Email Address</label>
-                <input type="email" name="email" class="form-control">
-              </div>
+    <div class="col-md-6">
+      <label class="form-label">Age Group</label>
+      <select name="age" class="form-select">
+        <option>Select</option>
+        <option>18 – 25</option>
+        <option>26 – 35</option>
+        <option>36 – 45</option>
+        <option>46 – 55</option>
+        <option>56+</option>
+      </select>
+    </div>
 
-              <div class="col-md-6">
-                <label class="form-label">Age Group</label>
-                <select name="age" class="form-select">
-                  <option>Select</option>
-                  <option>18 – 25</option>
-                  <option>26 – 35</option>
-                  <option>36 – 45</option>
-                  <option>46 – 55</option>
-                  <option>56+</option>
-                </select>
-              </div>
+    <div class="col-md-6">
+      <label class="form-label">Insurance Plan</label>
+      <select name="plan" class="form-select">
+        <option value="">Select Insurance Plan</option>
+        <option>Jeevan Utsav</option>
+        <option>Jeevan Shree</option>
+        <option>Jeevan Labh</option>
+        <option>Dhan Bristi</option>
+        <option>Endowment Plan</option>
+        <option>Money Back Plan</option>
+        <option>Amulya Jeevan (Term Plan)</option>
+        <option>Bima Kiran (Term Plan)</option>
+        <option>Term Micro Insurance</option>
+        <option>New Jeevan Tarang</option>
+        <option>Baal Unnati (Child Plan)</option>
+        <option>Jeevan Madhur</option>
+        <option>Endowment Micro Life Insurance Plan</option>
+      </select>
+    </div>
 
-<div class="col-md-6">
-  <label class="form-label">Insurance Plan</label>
-  <select name="plan" class="form-select">
-    <option value="">Select Insurance Plan</option>
+    <div class="col-md-6">
+      <label class="form-label">Preferred Contact</label>
+      <select name="contact" class="form-select">
+        <option>Phone Call</option>
+        <option>WhatsApp</option>
+        <option>Email</option>
+      </select>
+    </div>
 
-    <!-- Endowment Plans -->
-    <option>Jeevan Utsav</option>
-    <option>Jeevan Shree</option>
-    <option>Jeevan Labh</option>
-    <option>Dhan Bristi</option>
-    <option>Endowment Plan</option>
+    <div class="col-12">
+      <label class="form-label">Message</label>
+      <textarea name="message" class="form-control" rows="4"></textarea>
+    </div>
 
-    <!-- Money Back Plan -->
-    <option>Money Back Plan</option>
+    <!-- Google reCAPTCHA -->
+    <div class="col-12 mt-2">
+      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+    </div>
 
-    <!-- Term Insurance -->
-    <option>Amulya Jeevan (Term Plan)</option>
-    <option>Bima Kiran (Term Plan)</option>
-    <option>Term Micro Insurance</option>
+    <div class="col-12 text-center mt-3">
+      <button class="btn btn-primary rounded-pill px-4 py-2" type="submit">
+        Submit Request
+      </button>
+    </div>
 
-    <!-- Whole Life Plan -->
-    <option>New Jeevan Tarang</option>
+  </div>
+</form>
 
-    <!-- Child Plan -->
-    <option>Baal Unnati (Child Plan)</option>
-
-    <!-- Micro Insurance -->
-    <option>Jeevan Madhur</option>
-    <option>Endowment Micro Life Insurance Plan</option>
-  </select>
-</div><div class="col-md-6">
-  <label class="form-label">Insurance Plan</label>
-  <select name="plan" class="form-select">
-    <option value="">Select Insurance Plan</option>
-
-    <!-- Endowment Plans -->
-    <option>Jeevan Utsav</option>
-    <option>Jeevan Shree</option>
-    <option>Jeevan Labh</option>
-    <option>Dhan Bristi</option>
-    <option>Endowment Plan</option>
-
-    <!-- Money Back Plan -->
-    <option>Money Back Plan</option>
-
-    <!-- Term Insurance -->
-    <option>Amulya Jeevan (Term Plan)</option>
-    <option>Bima Kiran (Term Plan)</option>
-    <option>Term Micro Insurance</option>
-
-    <!-- Whole Life Plan -->
-    <option>New Jeevan Tarang</option>
-
-    <!-- Child Plan -->
-    <option>Baal Unnati (Child Plan)</option>
-
-    <!-- Micro Insurance -->
-    <option>Jeevan Madhur</option>
-    <option>Endowment Micro Life Insurance Plan</option>
-  </select>
-</div>
-
-              <div class="col-md-6">
-                <label class="form-label">Preferred Contact</label>
-                <select name="contact" class="form-select">
-                  <option>Phone Call</option>
-                  <option>WhatsApp</option>
-                  <option>Email</option>
-                </select>
-              </div>
-
-              <div class="col-12">
-                <label class="form-label">Message</label>
-                <textarea name="message" class="form-control" rows="4"></textarea>
-              </div>
-
-              <div class="col-12 text-center mt-3">
-                <button class="btn btn-primary rounded-pill px-4 py-2">
-                  Submit Request
-                </button>
-              </div>
-
-            </div>
-
-          </form>
-
+<!-- Load reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
         </div>
       </div>
 
     </div>
   </div>
 </section>
-<iframe aria-label='Life Insurance Quote Form' frameborder="0" style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.com/meelanjoosi18gm1/form/LifeInsuranceQuoteForm/formperma/t_FshYotw0K328LhkMsA2__jJt68vSUNNNioDKh9thw'></iframe>
-
-              <iframe src="https://www.licnepal.com.np/proposal-forms/" 
-        width="100%" 
-        height="800" 
-        style="border: none;">
-  Your browser doesn’t support iframes.
-</iframe>
-              
+             
        
         <!-- Footer Start -->
         <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
