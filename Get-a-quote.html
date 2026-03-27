@@ -192,113 +192,105 @@
 
                 
                     <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
-     <div class="bg-white rounded p-5 h-100">
-         <div class="row g-4 justify-content-center">
-             
-     
-          <div class="row g-4 justify-content-center">
-    <div class="row  justify-content-center">
-    <div class="col-lg-8">
+  <div class="bg-white rounded p-5 h-100">
 
-      <div class="card shadow-lg border-0 rounded-4">
-        <div class="card-body p-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
 
-          <h3 class="text-center mb-3">Get a Life Insurance Quote</h3>
-          <p class="text-center text-muted mb-4">
-            Fill in your details and I’ll help you choose the right plan.
-          </p>
+        <div class="card shadow-lg border-0 rounded-4">
+          <div class="card-body p-4">
 
-         <form action="https://formspree.io/f/mjkyjqpp" method="POST"
->
+            <h3 class="text-center mb-3">Get a Life Insurance Quote</h3>
+            <p class="text-center text-muted mb-4">
+              Quick estimate. Simple process. Professional guidance.
+            </p>
 
-            <!-- Email Subject -->
-            <input type="hidden" name="_subject" value="New Insurance Quote Request">
+            <form action="https://formspree.io/f/mjkyjqpp" method="POST">
 
-            <div class="row g-3">
-              
-              <div class="col-md-6">
-                <label class="form-label">Full Name</label>
-                <input type="text" name="name" class="form-control" required>
+              <!-- Email Settings -->
+              <input type="hidden" name="_subject" value="New Insurance Quote Request">
+              <input type="hidden" name="_captcha" value="false">
+
+              <div class="row g-3">
+
+                <div class="col-md-6">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" name="name" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" name="phone" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" name="email" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Age Group</label>
+                  <select name="age" class="form-select" required>
+                    <option value="" disabled selected>Select</option>
+                    <option>18 – 25</option>
+                    <option>26 – 35</option>
+                    <option>36 – 45</option>
+                    <option>46 – 55</option>
+                    <option>56+</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Insurance Plan</label>
+                  <select name="plan" class="form-select" required>
+                    <option value="" disabled selected>Select Plan</option>
+                    <option>Jeevan Utsav</option>
+                    <option>Jeevan Shree</option>
+                    <option>Jeevan Labh</option>
+                    <option>Dhan Bristi</option>
+                    <option>Endowment Plan</option>
+                    <option>Money Back Plan</option>
+                    <option>Amulya Jeevan (Term)</option>
+                    <option>Bima Kiran (Term)</option>
+                    <option>Term Micro Insurance</option>
+                    <option>New Jeevan Tarang</option>
+                    <option>Baal Unnati (Child Plan)</option>
+                    <option>Jeevan Madhur</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Preferred Contact</label>
+                  <select name="contact" class="form-select">
+                    <option>Phone Call</option>
+                    <option>WhatsApp</option>
+                    <option>Email</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Message</label>
+                  <textarea name="message" class="form-control" rows="4"
+                    placeholder="Optional details about coverage you want"></textarea>
+                </div>
+
+                <div class="col-12 text-center mt-3">
+                  <button type="submit" class="btn btn-primary rounded-pill px-4 py-2">
+                    Get My Quote
+                  </button>
+                </div>
+
               </div>
 
-              <div class="col-md-6">
-                <label class="form-label">Phone Number</label>
-                <input type="tel" name="phone" class="form-control" required>
-              </div>
+            </form>
 
-              <div class="col-md-6">
-                <label class="form-label">Email Address</label>
-                <input type="email" name="email" class="form-control">
-              </div>
-
-              <div class="col-md-6">
-                <label class="form-label">Age Group</label>
-                <select name="age" class="form-select">
-                  <option>Select</option>
-                  <option>18 – 25</option>
-                  <option>26 – 35</option>
-                  <option>36 – 45</option>
-                  <option>46 – 55</option>
-                  <option>56+</option>
-                </select>
-              </div>
-
-              <div class="col-md-6">
-                <label class="form-label">Insurance Plan</label>
-                <select name="plan" class="form-select">
-                  <option value="">Select Insurance Plan</option>
-                  <option>Jeevan Utsav</option>
-                  <option>Jeevan Shree</option>
-                  <option>Jeevan Labh</option>
-                  <option>Dhan Bristi</option>
-                  <option>Endowment Plan</option>
-                  <option>Money Back Plan</option>
-                  <option>Amulya Jeevan (Term Plan)</option>
-                  <option>Bima Kiran (Term Plan)</option>
-                  <option>Term Micro Insurance</option>
-                  <option>New Jeevan Tarang</option>
-                  <option>Baal Unnati (Child Plan)</option>
-                  <option>Jeevan Madhur</option>
-                  <option>Endowment Micro Life Insurance Plan</option>
-                </select>
-              </div>
-
-              <div class="col-md-6">
-                <label class="form-label">Preferred Contact</label>
-                <select name="contact" class="form-select">
-                  <option>Phone Call</option>
-                  <option>WhatsApp</option>
-                  <option>Email</option>
-                </select>
-              </div>
-
-              <div class="col-12">
-                <label class="form-label">Message</label>
-                <textarea name="message" class="form-control" rows="4"></textarea>
-              </div>
-
-              <div class="col-12 text-center mt-3">
-                <button class="btn btn-primary rounded-pill px-4 py-2">
-                  Submit Request
-                </button>
-              </div>
-
-            </div>
-
-          </form>
-
+          </div>
         </div>
-      </div>
 
+      </div>
+    </div>
 
   </div>
-
-</div>
-</div>
-    </div>
-
-     </div>
-    </div>
 </div>
                     
        
